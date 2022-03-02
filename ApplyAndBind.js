@@ -29,6 +29,11 @@ var student={name:'Tom',
 
 //apply
 var Showuser= function(){
+    console.log( this.name);
     return this.age;
 }
 console.log(`Age = ${Showuser.apply(student)}`)
+
+//bind
+var studentBound=Showuser.bind(student);
+console.log(`Age = ${studentBound()} `)
