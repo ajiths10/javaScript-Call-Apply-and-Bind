@@ -3,12 +3,11 @@ var numb={num:10};
 var numb1={num:1}
 
 //call
-var Showage = function(){
-    console.log(this.name);
-    return this.age;
+var Shownum = function(){
+    return this.num;
 };
-console.log(Showage.call(obj));
-
+console.log(Shownum.call(numb));
+console.log(Shownum.call(numb1));
 
 //apply
 var numberfn = function(a,b,c){
@@ -23,7 +22,7 @@ var bound=numberfn.bind(numb);
 console.log(bound(1,2,3));
 
 //object created for testing
-var obj={name:'Tom',
-        age: 23,
-        email:'Tom@email.com',
-};
+var student={name:'Tom',
+            age: 23,
+            email:'Tom@email.com',
+        };
