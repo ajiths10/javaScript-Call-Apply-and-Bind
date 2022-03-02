@@ -3,9 +3,9 @@ var obj={name:'Tom',
         email:'Tom@email.com',
 };
 
-var Showage = function(a){
+var Showage = function(){
     console.log(this.name);
-    return this.age+a;
+    return this.age;
 };
 
-console.log(Showage.call(obj,10));
+console.log(Showage.call(obj));
