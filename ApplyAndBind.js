@@ -21,8 +21,14 @@ console.log(numberfn.apply(numb1,arr))
 var bound=numberfn.bind(numb);
 console.log(bound(1,2,3));
 
-//object created for testing
+//new object created for testing
 var student={name:'Tom',
-            age: 23,
+            age: 20,
             email:'Tom@email.com',
         };
+
+//apply
+var Showuser= function(){
+    return this.age;
+}
+console.log(`Age = ${Showuser.apply(student)}`)
